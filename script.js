@@ -31,21 +31,21 @@ cardOneBtn.addEventListener('click', function (e) {
   let ballance = getBallance();
   const inputVal = cardOneInput.value;
   const cardDonationBox = document.querySelector('#card-1-donations');
-  const subject = 'famine-2024 at Feni, Bangladesh';
+  const subject = 'Flood Relief in Noakhali, Bangladesh';
   validateDonation(inputVal, ballance, cardDonationBox, subject);
 });
 cardTwoBtn.addEventListener('click', function (e) {
   e.preventDefault();
   let ballance = getBallance();
-  const inputVal = cardOneInput.value;
+  const inputVal = cardTwoInput.value;
   const cardDonationBox = document.querySelector('#card-2-donations');
-  const subject = 'Flood Relief in Feni,Bangladesh';
+  const subject = 'famine-2024 at Feni,Bangladesh';
   validateDonation(inputVal, ballance, cardDonationBox, subject);
 });
 cardThreeBtn.addEventListener('click', function (e) {
   e.preventDefault();
   let ballance = getBallance();
-  const inputVal = cardOneInput.value;
+  const inputVal = cardThreeInput.value;
   const cardDonationBox = document.querySelector('#card-3-donations');
   const subject = 'Aid for Injured in the Quota Movement, Bangladesh';
   validateDonation(inputVal, ballance, cardDonationBox, subject);

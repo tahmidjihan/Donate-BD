@@ -5,14 +5,12 @@ function getBallance() {
 
 function addToTotalDonated(amount, previous) {
   const previousOne = parseFloat(previous.innerText);
-  previous.innerText = parseFloat(previousOne) + parseFloat(amount);
-  return previous + amount;
+  previous.innerText = previousOne + parseFloat(amount);
 }
 
 function removeBallance(amount, previous) {
   const ballance = document.querySelector('#ballance');
   ballance.innerText = previous - amount;
-  return previous - amount;
 }
 
 function validateDonation(inputVal, ballance, cardDonationBox, subject) {
@@ -40,6 +38,6 @@ function validateDonation(inputVal, ballance, cardDonationBox, subject) {
             <p>Date: ${dateAndTime}</p>
           </div>
         </div>`;
-    history.appendChild(card);
+    history.innerHTML += card;
   }
 }
