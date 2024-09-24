@@ -17,6 +17,9 @@ tabTwoBtn.addEventListener('click', function () {
   tabOne.classList.add('hidden');
   tabTwo.classList.remove('hidden');
 });
+window.addEventListener('load', (e) => {
+  tabTwo.classList.add('hidden');
+});
 // donations calc
 
 const cardOneInput = document.querySelector('.card-1-input');
@@ -31,7 +34,7 @@ cardOneBtn.addEventListener('click', function (e) {
   let ballance = getBallance();
   const inputVal = cardOneInput.value;
   const cardDonationBox = document.querySelector('#card-1-donations');
-  const subject = 'Flood Relief in Noakhali, Bangladesh';
+  const subject = 'Donate for Flood Relief in Noakhali, Bangladesh';
   validateDonation(inputVal, ballance, cardDonationBox, subject);
 });
 cardTwoBtn.addEventListener('click', function (e) {
@@ -39,7 +42,7 @@ cardTwoBtn.addEventListener('click', function (e) {
   let ballance = getBallance();
   const inputVal = cardTwoInput.value;
   const cardDonationBox = document.querySelector('#card-2-donations');
-  const subject = 'famine-2024 at Feni,Bangladesh';
+  const subject = 'Donate for famine-2024 at Feni,Bangladesh';
   validateDonation(inputVal, ballance, cardDonationBox, subject);
 });
 cardThreeBtn.addEventListener('click', function (e) {
