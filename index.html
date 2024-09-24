@@ -19,9 +19,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header>
+    <header class="sticky top-0 z-50">
       <nav
-        class="navbar px-10 flex-col md:flex-row gap-10 py-5 sticky top-0 backdrop-blur-sm"
+        class="navbar px-10 flex-col md:flex-row gap-10 py-5 top-0 bg-[#ffffff86] backdrop-blur-sm"
       >
         <div class="mx-auto">
           <button class="btn bg-green-400">blog</button>
@@ -43,21 +43,15 @@
       </nav>
     </header>
     <main>
-      <div class="tabs flex gap-4 flex-wrap">
-        <div class="tab-1-active mx-auto">
-          <button class="btn-tab1 btn bg-green-400">Donations</button
-          ><button class="btn-tab-2 btn">History</button>
-        </div>
-        <div class="tab-2-active hidden mx-auto">
-          <button class="btn-tab1 btn">Donations</button
-          ><button class="btn-tab-2 btn bg-green-400">History</button>
-        </div>
+      <div class="tabs flex gap-4 justify-center">
+        <button class="btn-tab1 btn bg-green-400">Donations</button
+        ><button class="btn-tab2 btn">History</button>
       </div>
       <!-- donation start  -->
       <section id="donations">
         <div class="cards p-[20px] md:p-[200px] flex flex-col gap-10">
           <div
-            class="card card-side lg:flex-row flex-col bg-base-100 shadow-xl border flex-wrap"
+            class="card z-0 card-side lg:flex-row flex-col bg-base-100 shadow-xl border flex-wrap"
           >
             <figure class="p-6 lg:min-w-[500px] mx-auto">
               <img src="assets/noakhali.png" alt="Movie" />
@@ -178,7 +172,19 @@
         </div>
       </section>
       <!-- donation end  -->
-      <section id="history"></section>
+      <section
+        id="history"
+        class="flex flex-col justify-center align-middle mt-10"
+      >
+        <div
+          class="card w-96 lg:w-[800px] bg-base-100 shadow-xl mx-auto border"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold">${taka} donated for ${subject}</h2>
+            <p>Date: ${dateAndTime}</p>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="utilities.js"></script>
     <script src="script.js"></script>
