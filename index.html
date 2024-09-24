@@ -47,6 +47,21 @@
         <button class="btn-tab1 btn bg-green-400">Donations</button
         ><button class="btn-tab2 btn">History</button>
       </div>
+      <!-- modal  -->
+      <dialog id="successful" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box flex flex-col justify-center">
+          <h3 class="text-4xl font-extrabold mx-auto">Congratulations!</h3>
+          <img src="assets/coin.png" class="w-10 mx-auto" alt="Coin Image" />
+          <p class="py-4 mx-auto">You have donated to Humankind</p>
+          <h3 class="font-bold text-2xl mx-auto">Successfully</h3>
+          <div class="modal-action mx-auto">
+            <form id="closeForm" method="dialog">
+              <button class="btn w-full font-bold">Close confirmation</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
       <!-- donation start  -->
       <section id="donations">
         <div class="cards p-[20px] md:p-[200px] flex flex-col gap-10">
@@ -175,16 +190,7 @@
       <section
         id="history"
         class="flex flex-col justify-center align-middle mt-10"
-      >
-        <div
-          class="card w-96 lg:w-[800px] bg-base-100 shadow-xl mx-auto border"
-        >
-          <div class="card-body">
-            <h2 class="card-title font-bold">${taka} donated for ${subject}</h2>
-            <p>Date: ${dateAndTime}</p>
-          </div>
-        </div>
-      </section>
+      ></section>
     </main>
     <script src="utilities.js"></script>
     <script src="script.js"></script>

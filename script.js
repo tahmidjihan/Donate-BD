@@ -17,3 +17,45 @@ tabTwoBtn.addEventListener('click', function () {
   tabOne.classList.add('hidden');
   tabTwo.classList.remove('hidden');
 });
+// donations calc
+
+const cardOneInput = document.querySelector('.card-1-input');
+const cardOneBtn = document.querySelector('.card-1-btn');
+const cardTwoInput = document.querySelector('.card-2-input');
+const cardTwoBtn = document.querySelector('.card-2-btn');
+const cardThreeInput = document.querySelector('.card-3-input');
+const cardThreeBtn = document.querySelector('.card-3-btn');
+
+cardOneBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  let ballance = getBallance();
+  const inputVal = cardOneInput.value;
+  const cardDonationBox = document.querySelector('#card-1-donations');
+  const subject = 'famine-2024 at Feni, Bangladesh';
+  validateDonation(inputVal, ballance, cardDonationBox, subject);
+});
+cardTwoBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  let ballance = getBallance();
+  const inputVal = cardOneInput.value;
+  const cardDonationBox = document.querySelector('#card-2-donations');
+  const subject = 'Flood Relief in Feni,Bangladesh';
+  validateDonation(inputVal, ballance, cardDonationBox, subject);
+});
+cardThreeBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  let ballance = getBallance();
+  const inputVal = cardOneInput.value;
+  const cardDonationBox = document.querySelector('#card-3-donations');
+  const subject = 'Aid for Injured in the Quota Movement, Bangladesh';
+  validateDonation(inputVal, ballance, cardDonationBox, subject);
+});
+//modal
+const dialog = document.getElementById('successful');
+const closeForm = document.getElementById('closeForm');
+
+closeForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  dialog.close();
+});
+//history
